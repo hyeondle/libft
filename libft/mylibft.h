@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   put_string.c                                       :+:      :+:    :+:   */
+/*   mylibft.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyeondle <hyeondle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/22 14:22:36 by hyeondle          #+#    #+#             */
-/*   Updated: 2023/03/18 18:10:31 by hyeondle         ###   ########.fr       */
+/*   Created: 2023/03/18 18:07:14 by hyeondle          #+#    #+#             */
+/*   Updated: 2023/03/18 18:08:28 by hyeondle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#ifndef MYLIBFT_H
+# define MYLIBFT_H
 
-int	put_string(va_list conv)
-{
-	int		i;
-	char	*s;
+#include "./basic/libft.h"
+#include "./ft_printf/ft_printf.h"
+#include "./get_next_line/get_next_line.h"
 
-	s = va_arg(conv, char *);
-	if (s == NULL)
-	{
-		write (1, "(null)", 6);
-		return (6);
-	}
-	i = fp_strlen(s);
-	write(1, s, i);
-	return (i);
-}
+#endif

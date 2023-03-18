@@ -6,13 +6,13 @@
 /*   By: hyeondle <hyeondle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 16:28:46 by hyeondle          #+#    #+#             */
-/*   Updated: 2022/08/25 13:57:07 by hyeondle         ###   ########.fr       */
+/*   Updated: 2023/03/18 18:10:30 by hyeondle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_strlen(const char *str)
+int	fp_strlen(const char *str)
 {
 	int	i;
 
@@ -32,14 +32,14 @@ static int	ft_putchar_v2(int n, int d)
 	return (d);
 }
 
-int	ft_putnbr_fd(long long n, int printed_num)
+int	ft_putnbr(long long n, int printed_num)
 {
 	if (n < 0)
 	{
 		write(1, "-", 1);
 		n *= -1;
 		printed_num++;
-		printed_num = ft_putnbr_fd(n, printed_num);
+		printed_num = ft_putnbr(n, printed_num);
 	}
 	else if (n <= 9)
 	{
@@ -47,7 +47,7 @@ int	ft_putnbr_fd(long long n, int printed_num)
 	}
 	else
 	{
-		printed_num = ft_putnbr_fd(n / 10, printed_num);
+		printed_num = ft_putnbr(n / 10, printed_num);
 		printed_num = ft_putchar_v2(n % 10, printed_num);
 	}
 	return (printed_num);

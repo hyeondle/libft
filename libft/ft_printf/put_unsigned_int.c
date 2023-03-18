@@ -6,7 +6,7 @@
 /*   By: hyeondle <hyeondle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 14:28:03 by hyeondle          #+#    #+#             */
-/*   Updated: 2022/08/25 13:56:45 by hyeondle         ###   ########.fr       */
+/*   Updated: 2023/03/18 18:10:31 by hyeondle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	put_unsigned_int(va_list conv, int type)
 		num = va_arg(conv, unsigned int);
 		if (num < 0)
 			num *= -1;
-		printed_leng = ft_putnbr_fd(num, 0);
+		printed_leng = ft_putnbr(num, 0);
 	}
 	return (printed_leng);
 }

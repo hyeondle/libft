@@ -6,7 +6,7 @@
 /*   By: hyeondle <hyeondle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 16:09:55 by hyeondle          #+#    #+#             */
-/*   Updated: 2022/08/25 13:56:49 by hyeondle         ###   ########.fr       */
+/*   Updated: 2023/03/18 18:10:32 by hyeondle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 # include <unistd.h>
 
 int	ft_printf(const char *str_m, ...);
-int	ft_strlen(const char *str);
-int	ft_putnbr_fd(long long n, int d);
+int	fp_strlen(const char *str);
+int	ft_putnbr(long long n, int d);
 int	put_char(va_list conv);
 int	put_decimal(va_list conv);
 int	put_string(va_list conv);
