@@ -35,13 +35,13 @@ RM				=	rm -f
 
 all				:	$(NAME)
 
-$(BASIC)		:
+$(BASIC_DIR)$(BASIC)		:
 				@make -C $(BASIC_DIR)
 
-$(PF)			:
+$(PF_DIR)$(PF)			:
 				@make -C $(PF_DIR)
 
-$(GNL)			:
+$(GNL_DIR)$(GNL)		:
 				@make -C $(GNL_DIR)
 
 $(NAME)			:	$(BASIC_DIR)$(BASIC) $(PF_DIR)$(PF) $(GNL_DIR)$(GNL)
